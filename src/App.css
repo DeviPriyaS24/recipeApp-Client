@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.bgParallax{
+    background-image: url("https://www.farmizen.com/wp-content/uploads/2017/10/source.gif");
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
