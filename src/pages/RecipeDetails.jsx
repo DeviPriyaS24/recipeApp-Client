@@ -51,10 +51,10 @@ const RecipeDetails = () => {
               <img
                 src={recipeDetails.imgUrl}
                 alt=""
-                className="img-fluid rounded-4 shadow"
+                className="recipeImg img-fluid rounded-4 shadow"
                 style={{ width: "400px" }}
               />
-              <h1 className="text-dark">{recipeDetails.title}</h1>
+              <h1 className="recipeHead text-dark">{recipeDetails.title}</h1>
               <div className="d-flex">
                 {/* <button className="bg-info me-5 rounded-3 p-2 border-0 fw-bolder text-light">
                   Edit

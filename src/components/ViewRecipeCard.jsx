@@ -5,7 +5,6 @@ import { viewrecipeApi } from "../services/allApi";
 import RecipeDetails from "../pages/RecipeDetails";
 import { useNavigate } from "react-router-dom";
 
-
 const ViewRecipeCard = () => {
   const [recipeData, setRecipeData] = useState([]);
   const [selectedRecipeId, setSelectedRecipeId] = useState(null);
@@ -32,7 +31,7 @@ const ViewRecipeCard = () => {
       <div className="row container my-4 ms-5">
         {recipeData?.map((eachRecipe) => (
           <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} className="recipeCard">
               <Card.Img
                 variant="top"
                 src={eachRecipe.imgUrl}
@@ -42,7 +41,11 @@ const ViewRecipeCard = () => {
                 <Card.Title className="text-center">
                   {eachRecipe.title}
                 </Card.Title>
-                <Button onClick={() => navigate(`/recipe/${eachRecipe.id}`)} variant="primary" className="item-center">
+                <Button
+                  onClick={() => navigate(`/recipe/${eachRecipe.id}`)}
+                  variant="primary"
+                  className="view-recipe-btn item-center"
+                >
                   View Recipe
                 </Button>
               </Card.Body>
@@ -50,9 +53,7 @@ const ViewRecipeCard = () => {
           </div>
         ))}
       </div>
-      {selectedRecipeId && (
-        <RecipeDetails recipeId={selectedRecipeId} />
-      )}
+      {selectedRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
     </>
   );
 };

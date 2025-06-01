@@ -1,15 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.bgParallax{
-    background-image: url("https://www.farmizen.com/wp-content/uploads/2017/10/source.gif");
-            min-height: 100vh;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+.bgParallax {
+  background-image: url("https://www.farmizen.com/wp-content/uploads/2017/10/source.gif");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ViewRecipeCard style */
+.recipeCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.recipeCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.recipeCard:hover .view-recipe-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* RecipeDetails styles */
+.recipeHead {
+  font-size: 3rem;
+  color: #ff5722;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  animation: popIn 1s ease-in-out;
+}
+
+.recipeImg {
+  animation: fadeInZoom 1.2s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.recipeImg:hover {
+  transform: scale(1.03);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

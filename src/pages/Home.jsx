@@ -29,9 +29,9 @@ const Home = () => {
         <div className=" text-center">
           <button
             onClick={handleOpenAddModal}
-            className="btn bg-success shadow fw-bolder"
+            className="btn bg-danger shadow fw-bolder"
           >
-            ➕ Add Recipe
+            Add Recipe
           </button>
         </div>
       </div>
